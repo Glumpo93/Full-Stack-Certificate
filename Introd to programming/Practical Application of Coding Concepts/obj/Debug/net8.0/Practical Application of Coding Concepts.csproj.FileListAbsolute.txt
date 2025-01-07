@@ -1,0 +1,14 @@
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Practical Application of Coding Concepts\obj\Debug\net8.0\Practical Application of Coding Concepts.GeneratedMSBuildEditorConfig.editorconfig
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Practical Application of Coding Concepts\obj\Debug\net8.0\Practical Application of Coding Concepts.AssemblyInfoInputs.cache
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Practical Application of Coding Concepts\obj\Debug\net8.0\Practical Application of Coding Concepts.AssemblyInfo.cs
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Practical Application of Coding Concepts\obj\Debug\net8.0\Practical Application of Coding Concepts.csproj.CoreCompileInputs.cache
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Practical Application of Coding Concepts\bin\Debug\net8.0\Practical Application of Coding Concepts.exe
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Practical Application of Coding Concepts\bin\Debug\net8.0\Practical Application of Coding Concepts.deps.json
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Practical Application of Coding Concepts\bin\Debug\net8.0\Practical Application of Coding Concepts.runtimeconfig.json
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Practical Application of Coding Concepts\bin\Debug\net8.0\Practical Application of Coding Concepts.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Practical Application of Coding Concepts\bin\Debug\net8.0\Practical Application of Coding Concepts.pdb
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Practical Application of Coding Concepts\obj\Debug\net8.0\Practical Application of Coding Concepts.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Practical Application of Coding Concepts\obj\Debug\net8.0\refint\Practical Application of Coding Concepts.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Practical Application of Coding Concepts\obj\Debug\net8.0\Practical Application of Coding Concepts.pdb
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Practical Application of Coding Concepts\obj\Debug\net8.0\Practical Application of Coding Concepts.genruntimeconfig.cache
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Practical Application of Coding Concepts\obj\Debug\net8.0\ref\Practical Application of Coding Concepts.dll

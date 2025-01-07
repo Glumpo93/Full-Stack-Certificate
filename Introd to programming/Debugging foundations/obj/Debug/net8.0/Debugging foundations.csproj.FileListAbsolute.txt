@@ -1,0 +1,14 @@
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Debugging foundations\bin\Debug\net8.0\Debugging foundations.exe
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Debugging foundations\bin\Debug\net8.0\Debugging foundations.deps.json
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Debugging foundations\bin\Debug\net8.0\Debugging foundations.runtimeconfig.json
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Debugging foundations\bin\Debug\net8.0\Debugging foundations.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Debugging foundations\bin\Debug\net8.0\Debugging foundations.pdb
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Debugging foundations\obj\Debug\net8.0\Debugging foundations.GeneratedMSBuildEditorConfig.editorconfig
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Debugging foundations\obj\Debug\net8.0\Debugging foundations.AssemblyInfoInputs.cache
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Debugging foundations\obj\Debug\net8.0\Debugging foundations.AssemblyInfo.cs
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Debugging foundations\obj\Debug\net8.0\Debugging foundations.csproj.CoreCompileInputs.cache
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Debugging foundations\obj\Debug\net8.0\Debugging foundations.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Debugging foundations\obj\Debug\net8.0\refint\Debugging foundations.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Debugging foundations\obj\Debug\net8.0\Debugging foundations.pdb
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Debugging foundations\obj\Debug\net8.0\Debugging foundations.genruntimeconfig.cache
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\Debugging foundations\obj\Debug\net8.0\ref\Debugging foundations.dll

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Practical Application of Coding Concepts/1.0.0": {
+        "runtime": {
+          "Practical Application of Coding Concepts.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Practical Application of Coding Concepts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
