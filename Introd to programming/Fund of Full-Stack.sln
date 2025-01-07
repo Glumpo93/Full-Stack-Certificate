@@ -5,11 +5,13 @@ VisualStudioVersion = 17.11.35431.28
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Methods in C#", "Methods in C#\Methods in C#.csproj", "{1340434A-FF8C-47AB-B793-9A711EE3E773}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practical Application of Coding Concepts", "Practical Application of Coding Concepts\Practical Application of Coding Concepts.csproj", "{CDA7F9D4-3301-49AD-B558-197B88BB5201}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practical Application of Coding Concepts", "Practical Application of Coding Concepts\Practical Application of Coding Concepts.csproj", "{CDA7F9D4-3301-49AD-B558-197B88BB5201}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugging foundations", "Debugging foundations\Debugging foundations.csproj", "{4737A5F2-9FBA-4930-A36B-B19FE1E262FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Debugging foundations", "Debugging foundations\Debugging foundations.csproj", "{4737A5F2-9FBA-4930-A36B-B19FE1E262FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Copilot Debugging", "Copilot Debugging\Copilot Debugging.csproj", "{A61F9A99-EDE3-4F21-B055-80C6352B9812}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Copilot Debugging", "Copilot Debugging\Copilot Debugging.csproj", "{A61F9A99-EDE3-4F21-B055-80C6352B9812}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalProject", "FinalProject\FinalProject.csproj", "{B6FFD4A3-3C1B-47AD-88E2-76B93EE30DB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A61F9A99-EDE3-4F21-B055-80C6352B9812}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A61F9A99-EDE3-4F21-B055-80C6352B9812}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A61F9A99-EDE3-4F21-B055-80C6352B9812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6FFD4A3-3C1B-47AD-88E2-76B93EE30DB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6FFD4A3-3C1B-47AD-88E2-76B93EE30DB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6FFD4A3-3C1B-47AD-88E2-76B93EE30DB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6FFD4A3-3C1B-47AD-88E2-76B93EE30DB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Practical Application of Coding Concepts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a731e270b20eab77999b9256937f57611a23bf21")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c000323ef9e47e7dcbb91772ad3aead298620e0b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Practical Application of Coding Concepts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Practical Application of Coding Concepts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
