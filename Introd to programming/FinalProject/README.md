@@ -35,3 +35,6 @@
 - Methods
 - If/Else and/or Switch Statements
 - Loops
+
+
+![Final Project flow](https://github.com/Glumpo93/Full-Stach-Certificate/blob/main/Introd%20to%20programming/FinalProject/Final%20Project%201.drawio.png?raw=true)
