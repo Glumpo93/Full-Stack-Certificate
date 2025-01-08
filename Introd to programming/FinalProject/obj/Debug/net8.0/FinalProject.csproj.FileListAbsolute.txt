@@ -1,0 +1,15 @@
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\FinalProject\bin\Debug\net8.0\FinalProject.exe
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\FinalProject\bin\Debug\net8.0\FinalProject.deps.json
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\FinalProject\bin\Debug\net8.0\FinalProject.runtimeconfig.json
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\FinalProject\bin\Debug\net8.0\FinalProject.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\FinalProject\bin\Debug\net8.0\FinalProject.pdb
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\FinalProject\obj\Debug\net8.0\FinalProject.GeneratedMSBuildEditorConfig.editorconfig
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\FinalProject\obj\Debug\net8.0\FinalProject.AssemblyInfoInputs.cache
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\FinalProject\obj\Debug\net8.0\FinalProject.AssemblyInfo.cs
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\FinalProject\obj\Debug\net8.0\FinalProject.csproj.CoreCompileInputs.cache
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\FinalProject\obj\Debug\net8.0\FinalProject.sourcelink.json
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\FinalProject\obj\Debug\net8.0\FinalProject.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\FinalProject\obj\Debug\net8.0\refint\FinalProject.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\FinalProject\obj\Debug\net8.0\FinalProject.pdb
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\FinalProject\obj\Debug\net8.0\FinalProject.genruntimeconfig.cache
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Introd to programming\FinalProject\obj\Debug\net8.0\ref\FinalProject.dll

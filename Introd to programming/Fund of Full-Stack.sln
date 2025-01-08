@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Copilot Debugging", "Copilo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalProject", "FinalProject\FinalProject.csproj", "{B6FFD4A3-3C1B-47AD-88E2-76B93EE30DB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet Start", "Dotnet Start\Dotnet Start.csproj", "{7CE1136E-E776-4FF2-85CB-5FB5CC649145}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B6FFD4A3-3C1B-47AD-88E2-76B93EE30DB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6FFD4A3-3C1B-47AD-88E2-76B93EE30DB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6FFD4A3-3C1B-47AD-88E2-76B93EE30DB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CE1136E-E776-4FF2-85CB-5FB5CC649145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE1136E-E776-4FF2-85CB-5FB5CC649145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CE1136E-E776-4FF2-85CB-5FB5CC649145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE1136E-E776-4FF2-85CB-5FB5CC649145}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
