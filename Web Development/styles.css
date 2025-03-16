@@ -7,8 +7,6 @@
 
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif; /* Enhance readability with widely supported fonts */
-    margin: 0;
-    padding: 0;
     color: #333; /* Ensure good contrast */
     background-color: #fff; /* Ensure good contrast */
 }
@@ -22,8 +20,6 @@ header {
 
 nav ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     text-align: center;
 }
 

@@ -1,29 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('nav ul');
+    const filterButtons = document.querySelector('.filter-buttons');
+    const projects = document.querySelectorAll('.project');
+    const lightbox = document.createElement('div');
+    const form = document.querySelector('form');
+
+    lightbox.id = 'lightbox';
+    document.body.appendChild(lightbox);
 
     hamburger.addEventListener('click', function() {
         navMenu.classList.toggle('visible');
     });
 
     // Smooth scrolling
-    document.querySelectorAll('nav ul li a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+    navMenu.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
             e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
+            const targetId = e.target.getAttribute('href').substring(1);
             document.getElementById(targetId).scrollIntoView({
                 behavior: 'smooth'
             });
-        });
+        }
     });
 
     // Filter feature
-    const filterButtons = document.querySelectorAll('.filter-button');
-    const projects = document.querySelectorAll('.project');
-
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const filter = this.getAttribute('data-filter');
+    filterButtons.addEventListener('click', function(e) {
+        if (e.target.classList.contains('filter-button')) {
+            const filter = e.target.getAttribute('data-filter');
             projects.forEach(project => {
                 if (filter === 'all' || project.classList.contains(filter)) {
                     project.style.display = 'block';
@@ -31,25 +35,20 @@ document.addEventListener('DOMContentLoaded', function() {
                     project.style.display = 'none';
                 }
             });
-        });
+        }
     });
 
     // Lightbox effect
-    const lightbox = document.createElement('div');
-    lightbox.id = 'lightbox';
-    document.body.appendChild(lightbox);
-
-    const images = document.querySelectorAll('.project img');
-    images.forEach(image => {
-        image.addEventListener('click', function() {
+    document.querySelector('#projects').addEventListener('click', function(e) {
+        if (e.target.tagName === 'IMG') {
             lightbox.classList.add('active');
             const img = document.createElement('img');
-            img.src = image.src;
+            img.src = e.target.src;
             while (lightbox.firstChild) {
                 lightbox.removeChild(lightbox.firstChild);
             }
             lightbox.appendChild(img);
-        });
+        }
     });
 
     lightbox.addEventListener('click', function() {
@@ -57,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Form validation
-    const form = document.querySelector('form');
     form.addEventListener('submit', function(e) {
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
