@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "YGtO8YC3I1Q=",
+  "dgSpecHash": "poLcShHG8J8=",
   "success": true,
   "projectFilePath": "D:\\Felipe\\Cursos\\Programación\\Full-Stack Develop Cursera\\Introd to programming\\Debugging foundations\\Debugging foundations.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\feli_\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.15\\microsoft.netcore.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\feli_\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.15\\microsoft.windowsdesktop.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\feli_\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.15\\microsoft.aspnetcore.app.ref.8.0.15.nupkg.sha512",
+    "C:\\Users\\feli_\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.15\\microsoft.netcore.app.host.win-x64.8.0.15.nupkg.sha512"
+  ],
   "logs": []
 }
