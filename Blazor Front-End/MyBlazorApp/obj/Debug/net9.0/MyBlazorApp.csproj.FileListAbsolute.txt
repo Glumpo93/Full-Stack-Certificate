@@ -199,8 +199,6 @@ D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBla
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat
-D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\MyBlazorApp.27hjo9whd6.wasm
-D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\MyBlazorApp.78qg6glxwb.pdb
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\blazor.webassembly.js.gz
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\Microsoft.AspNetCore.Authorization.tnyc7xpluy.wasm.gz
@@ -403,8 +401,6 @@ D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBla
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\icudt_CJK.tjcz0u77k5.dat.gz
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\icudt_EFIGS.tptq2av103.dat.gz
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\icudt_no_CJK.lfu7j35m59.dat.gz
-D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\MyBlazorApp.27hjo9whd6.wasm.gz
-D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\MyBlazorApp.78qg6glxwb.pdb.gz
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\blazor.boot.json.gz
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\MyBlazorApp.staticwebassets.runtime.json
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\MyBlazorApp.staticwebassets.endpoints.json
@@ -1069,9 +1065,6 @@ D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBla
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\compressed\am1u1mbqiq-tjcz0u77k5.gz
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\compressed\o76u98ev1i-tptq2av103.gz
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\compressed\3a44cq2bfo-lfu7j35m59.gz
-D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\compressed\w5qwprknaq-27hjo9whd6.gz
-D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\compressed\hy8h8twu6g-78qg6glxwb.gz
-D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\compressed\1x8j8qyv39-3rf2ehei02.gz
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\staticwebassets.build.json
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\staticwebassets.build.json.cache
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\staticwebassets.development.json
@@ -1081,3 +1074,16 @@ D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBla
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\refint\MyBlazorApp.dll
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\MyBlazorApp.pdb
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\ref\MyBlazorApp.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\Newtonsoft.Json.qkbufwhni2.wasm
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\Newtonsoft.Json.qkbufwhni2.wasm.gz
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\Newtonsoft.Json.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\webcil\Newtonsoft.Json.wasm
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\compressed\spp9334kd4-g8ce1ap4e9.gz
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\compressed\tidvrd2q4z-qkbufwhni2.gz
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\MyBlazorApp.7cdjk49719.wasm
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\MyBlazorApp.yocipytqmq.pdb
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\MyBlazorApp.7cdjk49719.wasm.gz
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\bin\Debug\net9.0\wwwroot\_framework\MyBlazorApp.yocipytqmq.pdb.gz
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\compressed\w5qwprknaq-7cdjk49719.gz
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\compressed\hy8h8twu6g-yocipytqmq.gz
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\MyBlazorApp\obj\Debug\net9.0\compressed\1x8j8qyv39-2d51ekpd0u.gz

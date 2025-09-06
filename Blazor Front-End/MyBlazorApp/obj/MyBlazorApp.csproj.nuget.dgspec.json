@@ -53,10 +53,6 @@
               "target": "Package",
               "version": "[9.0.8, )"
             },
-            "Microsoft.AspNetCore.SignalR.Protocols.Json": {
-              "target": "Package",
-              "version": "[9.0.8, )"
-            },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
@@ -68,6 +64,10 @@
               "target": "Package",
               "version": "[9.0.8, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
