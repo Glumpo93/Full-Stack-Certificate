@@ -11,7 +11,8 @@
 }
 else
 {
-    <p>Loading...</p>
+    <p class="text-danger">Event not found. Please check the event ID.</p>
+    <NavLink href="/events" class="btn btn-primary">Back to Event List</NavLink>
 }
 
 @code {
@@ -22,10 +23,10 @@ else
     protected override void OnInitialized()
     {
         // Mock data for demonstration
-        List<EventModel>? events = new List<EventModel>
+        List<EventModel> events = new List<EventModel>()
         {
-            new EventModel { Name = "Blazor Workshop", Date = DateTime.Now.AddDays(1), Location = "Online", Id = 1 },
-            new EventModel { Name = "C# Conference", Date = DateTime.Now.AddDays(10), Location = "New York", Id = 2 }
+            new EventModel { Id = 1, Name = "Blazor Workshop", Date = DateTime.Now.AddDays(value: 1), Location = "Online" },
+            new EventModel { Id = 2, Name = "C# Conference", Date = DateTime.Now.AddDays(value: 10), Location = "New York" }
         };
 
         eventDetails = events.FirstOrDefault(e => e.Id == Id);

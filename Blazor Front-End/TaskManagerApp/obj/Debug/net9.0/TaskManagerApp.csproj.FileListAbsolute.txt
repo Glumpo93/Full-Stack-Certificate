@@ -1075,10 +1075,10 @@ D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskM
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\obj\Debug\net9.0\ref\TaskManagerApp.dll
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\obj\Debug\net9.0\compressed\ogt7tjc05q-jng136zik5.gz
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\obj\Debug\net9.0\compressed\89nvx9323q-jng136zik5.gz
-D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\bin\Debug\net9.0\wwwroot\_framework\TaskManagerApp.y9rgsg5cdt.wasm
-D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\bin\Debug\net9.0\wwwroot\_framework\TaskManagerApp.vywzsph59r.pdb
-D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\bin\Debug\net9.0\wwwroot\_framework\TaskManagerApp.y9rgsg5cdt.wasm.gz
-D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\bin\Debug\net9.0\wwwroot\_framework\TaskManagerApp.vywzsph59r.pdb.gz
-D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\obj\Debug\net9.0\compressed\38cmbi1rzw-y9rgsg5cdt.gz
-D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\obj\Debug\net9.0\compressed\t1swxz3jb3-vywzsph59r.gz
-D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\obj\Debug\net9.0\compressed\glbvzcnv5h-ftnr2j0ztv.gz
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\bin\Debug\net9.0\wwwroot\_framework\TaskManagerApp.rmu7t6f8rh.wasm
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\bin\Debug\net9.0\wwwroot\_framework\TaskManagerApp.77rg5gzfg3.pdb
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\bin\Debug\net9.0\wwwroot\_framework\TaskManagerApp.rmu7t6f8rh.wasm.gz
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\bin\Debug\net9.0\wwwroot\_framework\TaskManagerApp.77rg5gzfg3.pdb.gz
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\obj\Debug\net9.0\compressed\38cmbi1rzw-rmu7t6f8rh.gz
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\obj\Debug\net9.0\compressed\t1swxz3jb3-77rg5gzfg3.gz
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Blazor Front-End\TaskManagerApp\obj\Debug\net9.0\compressed\glbvzcnv5h-a6d7kje9x4.gz

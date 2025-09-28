@@ -3,20 +3,30 @@
 
 <h1>Event List</h1>
 
-@foreach (var eventItem in events)
-{
+<Virtualize ItemsProvider="LoadEvents" Context="eventItem">
     <div>
         <h3>@eventItem.Name</h3>
         <p>Date: @eventItem.Date.ToShortDateString()</p>
         <p>Location: @eventItem.Location</p>
         <NavLink href="@($"/events/{eventItem.Id}")">View Details</NavLink>
     </div>
-}
+</Virtualize>
 
 @code {
-    private List<EventModel> events = new()
+    private async ValueTask<ItemsProviderResult<EventModel>> LoadEvents(ItemsProviderRequest request)
     {
-        new EventModel { Id = 1, Name = "Blazor Workshop", Date = DateTime.Now.AddDays(1), Location = "Online" },
-        new EventModel { Id = 2, Name = "C# Conference", Date = DateTime.Now.AddDays(10), Location = "New York" }
-    };
+        // Simulate fetching data from an API or database
+        await Task.Delay(millisecondsDelay: 50); // Reduced latency for better responsiveness
+
+        int totalItemCount = 10000;
+        IEnumerable<EventModel> events = Enumerable.Range(request.StartIndex, request.Count).Select(i => new EventModel
+        {
+            Id = i + 1,
+            Name = $"Event {i + 1}",
+            Date = DateTime.Now.AddDays(i),
+            Location = $"Location {i + 1}"
+        });
+
+        return new ItemsProviderResult<EventModel>(events.ToList(), totalItemCount);
+    }
 }
