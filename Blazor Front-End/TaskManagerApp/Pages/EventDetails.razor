@@ -1,5 +1,7 @@
 ﻿@page "/events/{id:int}"
 @using TaskManagerApp.Models
+@using TaskManagerApp.Services
+@inject EventService EventService
 
 <h1>Event Details</h1>
 
@@ -20,15 +22,8 @@ else
 
     private EventModel? eventDetails;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        // Mock data for demonstration
-        List<EventModel> events = new List<EventModel>()
-        {
-            new EventModel { Id = 1, Name = "Blazor Workshop", Date = DateTime.Now.AddDays(value: 1), Location = "Online" },
-            new EventModel { Id = 2, Name = "C# Conference", Date = DateTime.Now.AddDays(value: 10), Location = "New York" }
-        };
-
-        eventDetails = events.FirstOrDefault(e => e.Id == Id);
+        eventDetails = await EventService.GetEventByIdAsync(Id);
     }
 }

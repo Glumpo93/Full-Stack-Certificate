@@ -1,5 +1,6 @@
 @page "/register"
 @using System.ComponentModel.DataAnnotations
+@using TaskManagerApp.Models
 
 <h1>Register for an Event</h1>
 
@@ -7,34 +8,64 @@
     <DataAnnotationsValidator />
     <ValidationSummary />
 
-    <div>
-        <label for="name">Name:</label>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
         <input id="name" class="form-control" @bind="registration.Name" />
         <ValidationMessage For="@(() => registration.Name)" />
     </div>
-    <div>
-        <label for="email">Email:</label>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
         <input id="email" class="form-control" @bind="registration.Email" />
         <ValidationMessage For="@(() => registration.Email)" />
     </div>
+
+    <div class="mb-3">
+        <label for="event" class="form-label">Select Event:</label>
+        <select id="event" class="form-select" @bind="registration.EventId">
+            <option value="">-- Select an Event --</option>
+            @foreach (var eventItem in events)
+            {
+                <option value="@eventItem.Id">@eventItem.Name</option>
+            }
+        </select>
+        <ValidationMessage For="@(() => registration.EventId)" />
+    </div>
+
     <button type="submit" class="btn btn-primary">Register</button>
 </EditForm>
 
+@if (successMessage != null)
+{
+    <p class="text-success">@successMessage</p>
+}
+
 @code {
-    private RegistrationModel registration = new RegistrationModel();
+    private RegistrationModel registration = new();
+    private string? successMessage;
+
+    private List<EventModel> events = new()
+    {
+        new EventModel { Id = 1, Name = "Blazor Workshop" },
+        new EventModel { Id = 2, Name = "C# Conference" }
+    };
+
+    [Inject] private UserSessionService UserSession { get; set; } = default!;
 
     private void HandleValidSubmit()
     {
-        // Handle successful form submission
-    }
+        if (registration.EventId.HasValue)
+        {
+            UserSession.UserName = registration.Name;
+            UserSession.UserEmail = registration.Email;
+            UserSession.RegisteredEventIds.Add(registration.EventId.Value);
 
-    private class RegistrationModel
-    {
-        [Required(ErrorMessage = "Name is required.")]
-        public string Name { get; set; } = string.Empty;
-
-        [Required(ErrorMessage = "Email is required.")]
-        [EmailAddress(ErrorMessage = "Invalid email address.")]
-        public string Email { get; set; } = string.Empty;
+            var selectedEvent = events.FirstOrDefault(e => e.Id == registration.EventId.Value);
+            successMessage = $"Thank you, {registration.Name}, for registering for {selectedEvent?.Name ?? "the event"}!";
+        }
+        else
+        {
+            successMessage = "Please select a valid event.";
+        }
     }
 }

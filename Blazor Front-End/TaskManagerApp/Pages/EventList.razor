@@ -1,7 +1,29 @@
 ﻿@page "/events"
 @using TaskManagerApp.Models
+@using TaskManagerApp.Services
+@inject EventService EventService
+@inject UserSessionService UserSession
 
 <h1>Event List</h1>
+
+<h2>Registered Events</h2>
+@if (UserSession.RegisteredEventIds.Any())
+{
+    <ul>
+        @foreach (var eventId in UserSession.RegisteredEventIds)
+        {
+            var eventItem = events.FirstOrDefault(e => e.Id == eventId);
+            if (eventItem != null)
+            {
+                <li>@eventItem.Name (@eventItem.Date.ToShortDateString())</li>
+            }
+        }
+    </ul>
+}
+else
+{
+    <p>You have not registered for any events.</p>
+}
 
 <Virtualize ItemsProvider="LoadEvents" Context="eventItem">
     <div>
@@ -13,20 +35,16 @@
 </Virtualize>
 
 @code {
+    private List<EventModel> events = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        events = await EventService.GetEventsAsync();
+    }
+
     private async ValueTask<ItemsProviderResult<EventModel>> LoadEvents(ItemsProviderRequest request)
     {
-        // Simulate fetching data from an API or database
-        await Task.Delay(millisecondsDelay: 50); // Reduced latency for better responsiveness
-
-        int totalItemCount = 10000;
-        IEnumerable<EventModel> events = Enumerable.Range(request.StartIndex, request.Count).Select(i => new EventModel
-        {
-            Id = i + 1,
-            Name = $"Event {i + 1}",
-            Date = DateTime.Now.AddDays(i),
-            Location = $"Location {i + 1}"
-        });
-
-        return new ItemsProviderResult<EventModel>(events.ToList(), totalItemCount);
+        var paginatedEvents = events.Skip(request.StartIndex).Take(request.Count).ToList();
+        return await Task.FromResult(new ItemsProviderResult<EventModel>(paginatedEvents, events.Count));
     }
 }
