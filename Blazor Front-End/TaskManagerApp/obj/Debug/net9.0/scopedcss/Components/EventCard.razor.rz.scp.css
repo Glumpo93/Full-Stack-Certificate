@@ -1,0 +1,13 @@
+.event-card[b-pw8j590494] {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+.event-card h3[b-pw8j590494] {
+    margin: 0 0 0.5rem;
+}
+.event-card p[b-pw8j590494] {
+    margin: 0.25rem 0;
+}

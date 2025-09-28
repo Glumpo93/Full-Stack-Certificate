@@ -1,0 +1,25 @@
+@page "/register"
+
+<h1>Register for an Event</h1>
+
+<EditForm Model="@registration">
+    <div>
+        <label for="name">Name:</label>
+        <input id="name" @bind="registration.Name" />
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input id="email" @bind="registration.Email" />
+    </div>
+    <button type="submit">Register</button>
+</EditForm>
+
+@code {
+    private RegistrationModel registration = new();
+
+    private class RegistrationModel
+    {
+        public string Name { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+    }
+}

@@ -1,0 +1,22 @@
+﻿@page "/events"
+@using TaskManagerApp.Models
+
+<h1>Event List</h1>
+
+@foreach (var eventItem in events)
+{
+    <div>
+        <h3>@eventItem.Name</h3>
+        <p>Date: @eventItem.Date.ToShortDateString()</p>
+        <p>Location: @eventItem.Location</p>
+        <NavLink href="@($"/events/{eventItem.Id}")">View Details</NavLink>
+    </div>
+}
+
+@code {
+    private List<EventModel> events = new()
+    {
+        new EventModel { Id = 1, Name = "Blazor Workshop", Date = DateTime.Now.AddDays(1), Location = "Online" },
+        new EventModel { Id = 2, Name = "C# Conference", Date = DateTime.Now.AddDays(10), Location = "New York" }
+    };
+}

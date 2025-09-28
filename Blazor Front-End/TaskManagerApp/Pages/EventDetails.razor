@@ -1,0 +1,33 @@
+﻿@page "/events/{id:int}"
+@using TaskManagerApp.Models
+
+<h1>Event Details</h1>
+
+@if (eventDetails != null)
+{
+    <h3>@eventDetails.Name</h3>
+    <p>Date: @eventDetails.Date.ToShortDateString()</p>
+    <p>Location: @eventDetails.Location</p>
+}
+else
+{
+    <p>Loading...</p>
+}
+
+@code {
+    [Parameter] public int Id { get; set; }
+
+    private EventModel? eventDetails;
+
+    protected override void OnInitialized()
+    {
+        // Mock data for demonstration
+        List<EventModel>? events = new List<EventModel>
+        {
+            new EventModel { Name = "Blazor Workshop", Date = DateTime.Now.AddDays(1), Location = "Online", Id = 1 },
+            new EventModel { Name = "C# Conference", Date = DateTime.Now.AddDays(10), Location = "New York", Id = 2 }
+        };
+
+        eventDetails = events.FirstOrDefault(e => e.Id == Id);
+    }
+}

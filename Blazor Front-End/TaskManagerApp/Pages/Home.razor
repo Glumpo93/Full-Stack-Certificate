@@ -1,0 +1,16 @@
+﻿@page "/"
+@using TaskManagerApp.Models
+@using TaskManagerApp.Components
+
+<h1>Upcoming Events</h1>
+
+<EventCard EventName="@eventDetails.Name" EventDate="@eventDetails.Date" EventLocation="@eventDetails.Location" />
+
+@code {
+    private EventModel eventDetails = new EventModel
+    {
+        Name = "Blazor Workshop",
+        Date = new DateTime(2025, 9, 30),
+        Location = "Online"
+    };
+}
