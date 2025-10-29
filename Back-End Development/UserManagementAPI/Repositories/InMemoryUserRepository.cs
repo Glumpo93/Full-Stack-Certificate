@@ -1,36 +1,58 @@
+using System.Collections.Concurrent;
+using System.Threading;
+
 public class InMemoryUserRepository : IUserRepository
 {
-    private readonly Dictionary<int, User> _users = new();
-    private int _nextId = 1;
+    private readonly ConcurrentDictionary<int, User> _users = new();
+    private int _nextId = 0;
 
-    public async Task<IEnumerable<User>> GetAllAsync()
+    public Task<IReadOnlyList<User>> GetAllAsync(CancellationToken ct = default)
     {
-        return await Task.FromResult(_users.Values);
+        // Return a deterministic snapshot ordered by Id to support safe pagination
+        var snapshot = _users.Values
+            .OrderBy(u => u.Id)
+            .Select(u => new User { Id = u.Id, Name = u.Name, Email = u.Email }) // defensive copy
+            .ToList()
+            .AsReadOnly();
+
+        return Task.FromResult((IReadOnlyList<User>)snapshot);
     }
 
-    public async Task<User?> GetByIdAsync(int id)
+    public Task<User?> GetByIdAsync(int id, CancellationToken ct = default)
     {
-        return await Task.FromResult(_users.GetValueOrDefault(id));
+        _users.TryGetValue(id, out var user);
+        return Task.FromResult(user is null ? null : new User { Id = user.Id, Name = user.Name, Email = user.Email });
     }
 
-    public async Task<User> CreateAsync(User user)
+    public Task<User> CreateAsync(User user, CancellationToken ct = default)
     {
-        user.Id = _nextId++;
-        _users[user.Id] = user;
-        return await Task.FromResult(user);
+        // Basic uniqueness check (case-insensitive)
+        if (_users.Values.Any(u => string.Equals(u.Email, user.Email, StringComparison.OrdinalIgnoreCase)))
+            throw new InvalidOperationException("A user with the same email already exists.");
+
+        user.Id = Interlocked.Increment(ref _nextId);
+        // store a copy to avoid external mutation
+        var stored = new User { Id = user.Id, Name = user.Name, Email = user.Email };
+        _users[stored.Id] = stored;
+        return Task.FromResult(stored);
     }
 
-    public async Task<User?> UpdateAsync(User user)
+    public Task<User?> UpdateAsync(User user, CancellationToken ct = default)
     {
         if (!_users.ContainsKey(user.Id))
-            return null;
+            return Task.FromResult<User?>(null);
 
-        _users[user.Id] = user;
-        return await Task.FromResult(user);
+        // Prevent duplicate email across other users
+        if (_users.Values.Any(u => u.Id != user.Id && string.Equals(u.Email, user.Email, StringComparison.OrdinalIgnoreCase)))
+            throw new InvalidOperationException("Another user with the same email already exists.");
+
+        var stored = new User { Id = user.Id, Name = user.Name, Email = user.Email };
+        _users[stored.Id] = stored;
+        return Task.FromResult<User?>(stored);
     }
 
-    public async Task<bool> DeleteAsync(int id)
+    public Task<bool> DeleteAsync(int id, CancellationToken ct = default)
     {
-        return await Task.FromResult(_users.Remove(id));
+        return Task.FromResult(_users.TryRemove(id, out _));
     }
 }
