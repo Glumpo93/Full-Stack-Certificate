@@ -34,3 +34,11 @@ D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Back-End Development\U
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Back-End Development\UserManagementAPI\obj\Debug\net9.0\UserManagementAPI.pdb
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Back-End Development\UserManagementAPI\obj\Debug\net9.0\UserManagementAPI.genruntimeconfig.cache
 D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Back-End Development\UserManagementAPI\obj\Debug\net9.0\ref\UserManagementAPI.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Back-End Development\UserManagementAPI\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Back-End Development\UserManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Back-End Development\UserManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Back-End Development\UserManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Back-End Development\UserManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Back-End Development\UserManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Back-End Development\UserManagementAPI\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Back-End Development\UserManagementAPI\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll

@@ -2,6 +2,8 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -53,6 +55,14 @@ else
         });
     });
 }
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+app.UseMiddleware<JsonExceptionMiddleware>();
+
+app.UseMiddleware<TokenValidationMiddleware>();
+
+app.UseMiddleware<RequestResponseLoggingMiddleware>();
+app.UseMiddleware<SimpleRequestLoggingMiddleware>();
+
 app.UseHttpsRedirection();
 app.UseAuthorization();
 

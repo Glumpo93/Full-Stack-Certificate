@@ -1,0 +1,165 @@
+@baseUrl = http://localhost:5272
+@token = REPLACE_WITH_VALID_JWT
+
+### Dev token (local-only, if available)
+POST {{baseUrl}}/auth/dev-token
+Content-Type: application/json
+
+{
+  "username": "localtester"
+}
+
+### Get all users (paged)
+GET {{baseUrl}}/api/users?page=1&pageSize=10
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Get a specific user (id = 1)
+GET {{baseUrl}}/api/users/1
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Get non-existent user (should return 404)
+GET {{baseUrl}}/api/users/9999
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Create user (valid)
+POST {{baseUrl}}/api/users
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Alice Example",
+  "email": "alice@example.com"
+}
+
+### Create user (invalid email - expect 400/validation error)
+POST {{baseUrl}}/api/users
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Bob",
+  "email": "not-an-email"
+}
+
+### Create user (missing fields - expect 400)
+POST {{baseUrl}}/api/users
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": ""
+}
+
+### Update user (id = 1)
+PUT {{baseUrl}}/api/users/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Alice Updated",
+  "email": "alice.updated@example.com"
+}
+
+### Update non-existent user (expect 404)
+PUT {{baseUrl}}/api/users/9999
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "No One",
+  "email": "noone@example.com"
+}
+
+### Delete user (id = 1)
+DELETE {{baseUrl}}/api/users/1
+Authorization: Bearer {{token}}
+
+### Delete non-existent user (expect 404)
+DELETE {{baseUrl}}/api/users/9999
+Authorization: Bearer {{token}}
+```// filepath: D:\Felipe\Cursos\Programación\Full-Stack Develop Cursera\Back-End Development\UserManagementAPI\src\requests.http
+@baseUrl = http://localhost:5272
+@token = REPLACE_WITH_VALID_JWT
+
+### Dev token (local-only, if available)
+POST {{baseUrl}}/auth/dev-token
+Content-Type: application/json
+
+{
+  "username": "localtester"
+}
+
+### Get all users (paged)
+GET {{baseUrl}}/api/users?page=1&pageSize=10
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Get a specific user (id = 1)
+GET {{baseUrl}}/api/users/1
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Get non-existent user (should return 404)
+GET {{baseUrl}}/api/users/9999
+Authorization: Bearer {{token}}
+Accept: application/json
+
+### Create user (valid)
+POST {{baseUrl}}/api/users
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Alice Example",
+  "email": "alice@example.com"
+}
+
+### Create user (invalid email - expect 400/validation error)
+POST {{baseUrl}}/api/users
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Bob",
+  "email": "not-an-email"
+}
+
+### Create user (missing fields - expect 400)
+POST {{baseUrl}}/api/users
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": ""
+}
+
+### Update user (id = 1)
+PUT {{baseUrl}}/api/users/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "Alice Updated",
+  "email": "alice.updated@example.com"
+}
+
+### Update non-existent user (expect 404)
+PUT {{baseUrl}}/api/users/9999
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "name": "No One",
+  "email": "noone@example.com"
+}
+
+### Delete user (id = 1)
+DELETE {{baseUrl}}/api/users/1
+Authorization: Bearer {{token}}
+
+### Delete non-existent user (expect 404)
+DELETE {{baseUrl}}/api/users/9999
+Authorization: Bearer {{token}}
