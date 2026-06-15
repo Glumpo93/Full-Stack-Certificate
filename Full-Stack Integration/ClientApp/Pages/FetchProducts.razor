@@ -1,0 +1,104 @@
+@* InventoryHub - Product List Component
+   AI assisted with: HttpClient call, JSON deserialization, error handling, and static caching to reduce redundant API calls. *@
+
+@page "/fetchproducts"
+@inject HttpClient Http
+@using System.Text.Json
+
+<h3>Product List</h3>
+
+@if (errorMessage != null)
+{
+    <p style="color: red;">@errorMessage</p>
+}
+else if (products == null)
+{
+    <ul><li>Loading...</li></ul>
+}
+else
+{
+    <ul>
+        @foreach (var product in products)
+        {
+            <li>@product.Name - $@product.Price | Category: @product.Category?.Name</li>
+        }
+    </ul>
+}
+
+@code {
+    private Product[]? products;
+    private string? errorMessage;
+
+    // AI suggestion: static field caches results across navigations, eliminating redundant API calls
+    private static Product[]? _cachedProducts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Return immediately if data was already fetched in this session
+        if (_cachedProducts is not null)
+        {
+            products = _cachedProducts;
+            return;
+        }
+
+        try
+        {
+            // AI helped structure the full request pipeline: GetAsync → EnsureSuccessStatusCode → deserialize
+            var response = await Http.GetAsync("/api/productlist");
+            response.EnsureSuccessStatusCode();
+
+            var json = await response.Content.ReadAsStringAsync();
+
+            // AI recommended PropertyNameCaseInsensitive to guard against casing mismatches in JSON keys
+            products = JsonSerializer.Deserialize<Product[]>(json, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+
+            if (products is null)
+            {
+                errorMessage = "No products were returned by the API.";
+            }
+            else
+            {
+                _cachedProducts = products;
+            }
+        }
+        catch (TaskCanceledException)
+        {
+            errorMessage = "Request timed out. Please try again later.";
+        }
+        catch (HttpRequestException ex)
+        {
+            // AI suggested separating network errors from JSON errors for clearer diagnostics
+            errorMessage = $"Network error: {ex.Message}";
+        }
+        catch (JsonException ex)
+        {
+            // AI added this catch block specifically to handle malformed JSON from the back-end
+            errorMessage = $"Malformed JSON received from API: {ex.Message}";
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "An unexpected error occurred.";
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+    public class Category
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+    }
+
+    public class Product
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = string.Empty;
+        public double Price { get; set; }
+        public int Stock { get; set; }
+        // AI suggested nullable Category to prevent crashes when the field is missing in the response
+        public Category? Category { get; set; }
+    }
+}
