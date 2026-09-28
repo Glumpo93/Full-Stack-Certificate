@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HzSkLAAPtII=",
+  "dgSpecHash": "UTVkBD9zD2Q=",
   "success": true,
   "projectFilePath": "D:\\Felipe\\Cursos\\Programación\\Full-Stack Develop Cursera\\Blazor Front-End\\TaskManagerApp\\TaskManagerApp.csproj",
   "expectedPackageFiles": [
@@ -28,9 +28,12 @@
     "C:\\Users\\progr\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.8\\microsoft.extensions.primitives.9.0.8.nupkg.sha512",
     "C:\\Users\\progr\\.nuget\\packages\\microsoft.jsinterop\\9.0.8\\microsoft.jsinterop.9.0.8.nupkg.sha512",
     "C:\\Users\\progr\\.nuget\\packages\\microsoft.jsinterop.webassembly\\9.0.8\\microsoft.jsinterop.webassembly.9.0.8.nupkg.sha512",
-    "C:\\Users\\progr\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.8\\microsoft.net.illink.tasks.9.0.8.nupkg.sha512",
-    "C:\\Users\\progr\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\9.0.8\\microsoft.net.sdk.webassembly.pack.9.0.8.nupkg.sha512",
-    "C:\\Users\\progr\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\9.0.8\\microsoft.netcore.app.runtime.mono.browser-wasm.9.0.8.nupkg.sha512"
+    "C:\\Users\\progr\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.17\\microsoft.net.illink.tasks.9.0.17.nupkg.sha512",
+    "C:\\Users\\progr\\.nuget\\packages\\microsoft.net.sdk.webassembly.pack\\10.0.9\\microsoft.net.sdk.webassembly.pack.10.0.9.nupkg.sha512",
+    "C:\\Users\\progr\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.17\\microsoft.netcore.app.ref.9.0.17.nupkg.sha512",
+    "C:\\Users\\progr\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\9.0.17\\microsoft.netcore.app.runtime.mono.browser-wasm.9.0.17.nupkg.sha512",
+    "C:\\Users\\progr\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.17\\microsoft.windowsdesktop.app.ref.9.0.17.nupkg.sha512",
+    "C:\\Users\\progr\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.17\\microsoft.aspnetcore.app.ref.9.0.17.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,0 +1,53 @@
+<!-- webform.html -->
+<!--
+    Client-side checks here are a usability convenience only (instant feedback,
+    fewer round trips). They are NOT the security boundary: the real defenses
+    are server-side validation (Validation/InputValidator.cs) and parameterized
+    queries (Data/UserRepository.cs), because client-side JavaScript can always
+    be bypassed by an attacker calling the endpoint directly.
+-->
+<form id="signupForm" action="/submit" method="post" novalidate>
+    <label for="username">Username:</label>
+    <input
+        type="text"
+        id="username"
+        name="username"
+        pattern="[a-zA-Z0-9_-]{3,30}"
+        maxlength="30"
+        title="3-30 characters: letters, numbers, underscore or hyphen only"
+        required>
+
+    <label for="email">Email:</label>
+    <input
+        type="email"
+        id="email"
+        name="email"
+        maxlength="254"
+        required>
+
+    <button type="submit">Submit</button>
+    <p id="formError" role="alert" style="color: red;"></p>
+</form>
+
+<script>
+    // Mirrors the server-side rule in InputValidator.IsValidUsername so the
+    // user gets immediate feedback; the server re-validates independently.
+    const USERNAME_PATTERN = /^[a-zA-Z0-9_-]{3,30}$/;
+
+    document.getElementById('signupForm').addEventListener('submit', (event) => {
+        const username = document.getElementById('username').value;
+        const errorBox = document.getElementById('formError');
+        errorBox.textContent = '';
+
+        if (!USERNAME_PATTERN.test(username)) {
+            event.preventDefault();
+            errorBox.textContent = 'Username must be 3-30 characters: letters, numbers, underscore or hyphen only.';
+            return;
+        }
+
+        if (!document.getElementById('email').checkValidity()) {
+            event.preventDefault();
+            errorBox.textContent = 'Please enter a valid email address.';
+        }
+    });
+</script>
