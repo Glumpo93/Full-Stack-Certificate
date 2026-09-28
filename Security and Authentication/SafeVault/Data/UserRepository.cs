@@ -1,4 +1,5 @@
 using Microsoft.Data.Sqlite;
+using SafeVault.Auth;
 using SafeVault.Validation;
 
 namespace SafeVault.Data;
@@ -31,18 +32,22 @@ public class UserRepository
             CREATE TABLE IF NOT EXISTS Users (
                 UserID INTEGER PRIMARY KEY AUTOINCREMENT,
                 Username VARCHAR(100) NOT NULL,
-                Email VARCHAR(100) NOT NULL
+                Email VARCHAR(100) NOT NULL,
+                PasswordHash VARCHAR(255) NOT NULL,
+                Role VARCHAR(20) NOT NULL DEFAULT 'User'
             );
             """;
         command.ExecuteNonQuery();
     }
 
     /// <summary>
-    /// Inserts a new user. Throws <see cref="ArgumentException"/> if the input
-    /// does not pass validation, and uses a parameterized INSERT so the values
-    /// can never alter the shape of the SQL statement.
+    /// Registers a new user. Throws <see cref="ArgumentException"/> if the
+    /// username/email/password do not pass validation. The password is
+    /// hashed before it ever reaches the database - the plaintext value is
+    /// never stored. Uses a parameterized INSERT so the values can never
+    /// alter the shape of the SQL statement.
     /// </summary>
-    public int InsertUser(string username, string email)
+    public int InsertUser(string username, string email, string password, Role role = Role.User)
     {
         if (!InputValidator.IsValidUsername(username))
         {
@@ -54,13 +59,25 @@ public class UserRepository
             throw new ArgumentException("Invalid email.", nameof(email));
         }
 
+        if (!PasswordPolicy.IsValid(password, out var reason))
+        {
+            throw new ArgumentException(reason, nameof(password));
+        }
+
+        var passwordHash = PasswordHasher.Hash(password);
+
         using var connection = new SqliteConnection(_connectionString);
         connection.Open();
 
         using var command = connection.CreateCommand();
-        command.CommandText = "INSERT INTO Users (Username, Email) VALUES (@username, @email);";
+        command.CommandText = """
+            INSERT INTO Users (Username, Email, PasswordHash, Role)
+            VALUES (@username, @email, @passwordHash, @role);
+            """;
         command.Parameters.AddWithValue("@username", username);
         command.Parameters.AddWithValue("@email", email);
+        command.Parameters.AddWithValue("@passwordHash", passwordHash);
+        command.Parameters.AddWithValue("@role", role.ToString());
         command.ExecuteNonQuery();
 
         using var idCommand = connection.CreateCommand();
@@ -80,7 +97,10 @@ public class UserRepository
         connection.Open();
 
         using var command = connection.CreateCommand();
-        command.CommandText = "SELECT UserID, Username, Email FROM Users WHERE Username = @username;";
+        command.CommandText = """
+            SELECT UserID, Username, Email, PasswordHash, Role
+            FROM Users WHERE Username = @username;
+            """;
         command.Parameters.AddWithValue("@username", username);
 
         using var reader = command.ExecuteReader();
@@ -94,6 +114,8 @@ public class UserRepository
             UserId = reader.GetInt32(0),
             Username = reader.GetString(1),
             Email = reader.GetString(2),
+            PasswordHash = reader.GetString(3),
+            Role = Enum.Parse<Role>(reader.GetString(4)),
         };
     }
 

@@ -47,6 +47,8 @@ public class TestInputValidation
     [TestCase("' OR 1=1 --")]
     [TestCase("'; SELECT * FROM Users WHERE '1'='1")]
     [TestCase("admin'/*")]
+    [TestCase("' UNION SELECT UserID, Username, PasswordHash, Role, Email FROM Users --")]
+    [TestCase("x'; UPDATE Users SET Role = 'Admin' WHERE Username = 'legitUser'; --")]
     public void TestForSQLInjection(string maliciousInput)
     {
         // A SQL injection payload should never be accepted as a valid
@@ -57,7 +59,7 @@ public class TestInputValidation
         // ...and even if it reached the database layer, parameterized
         // queries mean it is treated as a literal search value, not SQL.
         using var repository = TestDatabase.CreateInMemoryRepository();
-        repository.InsertUser("legitUser", "legit@example.com");
+        repository.InsertUser("legitUser", "legit@example.com", "ValidPass123");
 
         var result = repository.GetUserByUsername(maliciousInput);
 

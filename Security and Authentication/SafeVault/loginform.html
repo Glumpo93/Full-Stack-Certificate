@@ -1,0 +1,35 @@
+<!-- loginform.html -->
+<!--
+    As with webform.html, this markup and its script are a UX convenience
+    only. The real authentication boundary is server-side:
+    Auth/AuthenticationService.cs verifies the password hash, and the server
+    must never trust a role or "logged in" flag sent from the client.
+-->
+<form id="loginForm" action="/login" method="post" novalidate>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" maxlength="30" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="submit">Log in</button>
+    <p id="loginError" role="alert" style="color: red;"></p>
+</form>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', (event) => {
+        const username = document.getElementById('username').value.trim();
+        const password = document.getElementById('password').value;
+        const errorBox = document.getElementById('loginError');
+        errorBox.textContent = '';
+
+        if (!username || !password) {
+            event.preventDefault();
+            errorBox.textContent = 'Please enter both a username and a password.';
+        }
+
+        // Deliberately no client-side password-strength or "user exists"
+        // check here: that information belongs only to the server, so it
+        // can't be used to enumerate valid usernames.
+    });
+</script>
